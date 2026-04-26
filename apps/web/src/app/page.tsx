@@ -10,7 +10,7 @@ export default function HomePage() {
           Chat, docs, and task boards in one real-time workspace.
         </h1>
         <p className="mx-auto mb-8 max-w-2xl text-base text-muted md:text-lg">
-          A functional MVP starter inspired by Slack, Notion, and Trello, with a clean purple + black design system and live API integration.
+          A functional MVP starter inspired by Slack, Notion, and Trello, for seamless collaboration.
         </p>
         <div className="flex items-center justify-center gap-4">
           <Link href="/login"><Button>Get Started</Button></Link>
