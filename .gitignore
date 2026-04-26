@@ -1,0 +1,90 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Node / Packages
+# =========================
+node_modules/
+**/node_modules/
+.npm/
+.pnpm-store/
+
+# =========================
+# Build output
+# =========================
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# =========================
+# Next.js
+# =========================
+.next/
+out/
+
+# =========================
+# Env files
+# =========================
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# =========================
+# Uploaded / generated files
+# =========================
+uploads/
+tmp/
+temp/
+
+# =========================
+# Docker
+# =========================
+.docker/
+docker-data/
+
+# =========================
+# Test / cache
+# =========================
+.cache/
+.turbo/
+jest-cache/
+playwright-report/
+test-results/
+
+# =========================
+# Mongo / local db artifacts
+# =========================
+mongo_data/
+*.sqlite
+*.sqlite3
+
+# =========================
+# Misc
+# =========================
+*.pid
+*.seed
+*.tgz
+
+# =========================
+# Git leftovers
+# =========================
+.git/refs/original/

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f7fb;
+  --foreground: #0f0f16;
+  --surface: #ffffff;
+  --border: #ddddef;
+  --primary: #6d28d9;
+  --muted: #606278;
+}
+
+.dark {
+  --background: #0b0b10;
+  --foreground: #f5f5fa;
+  --surface: #14141c;
+  --border: #2e2e42;
+  --primary: #7c3aed;
+  --muted: #a1a1b5;
+}
+
+* {
+  @apply border-border;
+}
+
+html, body {
+  @apply bg-background text-foreground;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea,
+input,
+button {
+  @apply transition-all duration-200;
+}

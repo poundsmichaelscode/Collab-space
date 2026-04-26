@@ -1,0 +1,41 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: collabspace-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: collabspace-api
+    depends_on:
+      - mongo
+    env_file:
+      - apps/api/.env.docker
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+        NEXT_PUBLIC_SOCKET_URL: http://localhost:8000
+    container_name: collabspace-web
+    depends_on:
+      - api
+    env_file:
+      - apps/web/.env.docker
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
